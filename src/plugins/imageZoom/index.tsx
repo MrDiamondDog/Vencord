@@ -217,6 +217,7 @@ export default definePlugin({
     },
 
     renderMagnifier(instance) {
+        if (!this.element) return;
         if (instance.props.id === ELEMENT_ID) {
             if (!this.currentMagnifierElement) {
                 this.currentMagnifierElement = <Magnifier size={settings.store.size} zoom={settings.store.zoom} instance={instance} />;
